@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:clipChildren="false"
     tools:context=".GameActivity">
 
     <LinearLayout
@@ -17,7 +18,17 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="2048" />
+            android:text="@string/game_tv_2048"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:background="@drawable/game_cell"
+            android:backgroundTint="@color/game_tile_2048"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/game_text_2048"/>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -25,13 +36,33 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/game_tv_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/game_cell"
+                android:backgroundTint="@color/game_tv_background"
+                android:text="@string/game_tv_score"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:paddingVertical="5dp"
+                />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:id="@+id/game_btn_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/calc_btn_digit"
+                android:backgroundTint="@color/game_btn_background"
+                app:backgroundTint="@null"
+                android:text="@string/game_tv_new"
+                android:textSize="20sp"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -40,13 +71,34 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/game_tv_best_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/game_cell"
+                android:backgroundTint="@color/game_tv_background"
+                android:text="@string/game_tv_best"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:paddingVertical="5dp"
+                />
+
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:id="@+id/game_btn_undo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/calc_btn_digit"
+                android:backgroundTint="@color/game_btn_background"
+                app:backgroundTint="@null"
+                android:textSize="20sp"
+                android:text="@string/game_tv_undo"
+                />
         </LinearLayout>
     </LinearLayout>
 
@@ -55,7 +107,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:textAlignment="center"
-        android:text="Збирай 2048" />
+        android:text="@string/game_tv_hint" />
 
     <LinearLayout
         android:id="@+id/game_ll_field"

@@ -40,8 +40,7 @@
             android:layout_marginTop="20dp"
             android:background="@color/main_btn_background"
             android:textSize="20sp"
-            app:backgroundTint="@null"
-            />
+            app:backgroundTint="@null" />
 
         <Button
             android:id="@+id/main_btn_game"
@@ -51,8 +50,17 @@
             android:layout_marginTop="20dp"
             android:background="@color/main_btn_background"
             android:textSize="20sp"
-            app:backgroundTint="@null"
-            />
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/main_btn_anim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_btn_anim"
+            android:layout_marginTop="20dp"
+            android:background="@color/main_btn_background"
+            android:textSize="20sp"
+            app:backgroundTint="@null" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
